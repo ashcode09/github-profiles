@@ -14,6 +14,13 @@ describe('GitUserSearchController', function() {
 });
 
 describe('when searching for a user', function() {
+	beforeEach(module('GitUserSearch'));
+
+	var ctrl;
+
+	beforeEach(inject(function($controller) {
+		ctrl = $controller('GitUserSearchController');
+	}));
 
 	var items = [
 		{
@@ -27,4 +34,10 @@ describe('when searching for a user', function() {
 			"html_url": "https://github.com/stephenlloyd"
 		}
 	];
+
+	it('displays search results', function() {
+		ctrl.searchTerm = "hello";
+		ctrl.doSearch();
+		expect(ctrl.searchResult.items).toEqual(items);
+	});
 });
