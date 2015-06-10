@@ -16,6 +16,22 @@ describe('GitUserSearchController', function() {
 describe('when searching for a user', function() {
 	beforeEach(module('GitUserSearch'));
 
+	var httpBackend;
+
+	beforeEach(inject(function($httpBackend) {
+		httpBackend = $httpBackend;
+		httpBackend
+			.expectGET("https://api.github.com/search/users?q=jellypants")
+			.respond(
+				{ items: items }
+			);
+	}));
+
+	afterEach(function() {
+		httpBackend.verifyNoOutstandingExpectation();
+		httpBackend.verifyNoOutstandingRequest();
+	});
+
 	var ctrl;
 
 	beforeEach(inject(function($controller) {
@@ -36,8 +52,9 @@ describe('when searching for a user', function() {
 	];
 
 	it('displays search results', function() {
-		ctrl.searchTerm = "hello";
+		ctrl.searchTerm = "jellypants";
 		ctrl.doSearch();
+		httpBackend.flush();
 		expect(ctrl.searchResult.items).toEqual(items);
 	});
 });
