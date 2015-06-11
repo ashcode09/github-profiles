@@ -5,10 +5,6 @@ describe('Github Profile Finder', function() {
 		expect(browser.getTitle()).toEqual('GitHub User Search');
 	});
 
-});
-
-describe('Github profile finder', function() {
-
 	it('finds profiles', function() {
 		browser.get('http://localhost:8080');
 		element(by.model('searchCtrl.searchTerm')).sendKeys('ashleigh090990');
