@@ -2,6 +2,7 @@ describe('Github Profile Finder', function() {
 
 	var inputBox = element(by.model('searchCtrl.searchTerm'));
 	var searchButton = element(by.className('btn'))
+	var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items'));
 
 	beforeEach(function() {
 		browser.get('http://localhost:8080');
@@ -14,8 +15,13 @@ describe('Github Profile Finder', function() {
 	it('finds profiles', function() {
 		inputBox.sendKeys('ashleigh090990');
 		searchButton.click();
-		var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items'));
 		expect(profiles.get(0).getText()).toEqual('ashleigh090990');
+	});
+
+	it('finds the last Ashleigh', function() {
+		inputBox.sendKeys('ashleigh090990');
+		searchButton.click();
+		expect(profiles.last().getText()).toEqual('ashleigh090990');
 	});
 
 });
