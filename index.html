@@ -5,6 +5,7 @@
 		<meta charset="utf-8">
 		<title>GitHub User Search</title>
 		<link rel="stylesheet" href="./public/style.css" />
+		<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
 		<script src="bower_components/jquery/dist/jquery.js"></script>
 		<script src="bower_components/angular/angular.js"></script>
 		<script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -14,17 +15,27 @@
 	</head>
 
 	<body ng-controller="GitUserSearchController as searchCtrl">
-		<div>
-			<form class="form-horizontal">
-				<input type="text" ng-model="searchCtrl.searchTerm" ng-change="doSearch()" ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }">
-				<button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
-			</form>
-			<ul class="list-group" ng-repeat="user in searchCtrl.searchResult.items">
-				<li class="list-group-item">
-					<img ng-src="{{user.avatar_url}}&s=50">
-					<a ng-href="{{user.html_url}}">{{user.login}}</a>
-				</li>
-			</ul>
+		<div class="main-div">
+			<div class="heading-and-search-bar">
+				<img src ="https://octodex.github.com/images/octocat-de-los-muertos.jpg">
+				<h1>Github User Profiles</h1>
+				<h6 class="page-description">Welcome to Github User Profiles!
+				Search for any user by providing either their name or their username:</h6>
+				<form class="form-horizontal">
+					<input type="text" ng-model="searchCtrl.searchTerm" ng-change="doSearch()" ng-model-options="{ updateOn: 'default blur', debounce: {'default': 500, 'blur': 0} }">
+					<button class="btn" ng-click="searchCtrl.doSearch()">Search</button>
+				</form>
+			</div>
+			<div class="box-containing-user-list">
+				<div class="list-of-users">
+					<ul class="list-group" ng-repeat="user in searchCtrl.searchResult.items">
+						<li class="list-group-item">
+							<img class="user-images" ng-src="{{user.avatar_url}}&s=50">
+							<a class="all-links" ng-href="{{user.html_url}}">{{user.login}}</a>
+						</li>
+					</ul>
+				</div>
+			</div>
 		</div>
 	</body>
 

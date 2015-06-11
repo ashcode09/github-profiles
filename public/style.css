@@ -2,6 +2,7 @@
    v2.0 | 20110126
    License: none (public domain)
 */
+<style>
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -49,16 +50,128 @@ table {
 
 /* ----------------------------------------------------------- */
 
-img {
-	border-style: 5px solid;
-	width: 50px;
+@-ms-keyframes wiggle{0%{-ms-transform:rotate(3deg);}50%{-ms-transform:rotate(-3deg);}100%{-ms-transform:rotate(3deg);}}
+@-moz-keyframes wiggle{0%{-moz-transform:rotate(3deg);}50%{-moz-transform:rotate(-3deg);}100%{-moz-transform:rotate(3deg);}}
+@-webkit-keyframes wiggle{0%{-webkit-transform:rotate(3deg);}50%{-webkit-transform:rotate(-3deg);}100%{-webkit-transform:rotate(3deg);}}
+@keyframes wiggle{0%{transform:rotate(3deg);}50%{transform:rotate(-3deg);}100%{transform:rotate(3deg);}}
+
+
+body {
+	font-family: arial;
+	font-size: 12px;
 }
 
+.heading-and-search-bar {
+	width: 600px;
+	text-align: center;
+	margin: 2em;
+}
 
+.page-description {
+	font-family: 'Lobster', cursive;
+	font-size: 15px;
+}
 
+.list-of-users {
+	margin: right;
+}
 
+img {
+	height: 350px;
+}
 
+.user-images {
+	height: 60px;
+	width: 60px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: white;
+	background-clip: border-box;
+	border-radius: 100%;
+}
 
+.user-images:hover {
+	-ms-animation:wiggle .3s 2;
+	-moz-animation:wiggle .3s 2;
+	-webkit-animation:wiggle .3s 2;
+	animation:wiggle .3s 2;
+}
 
+h1 {
+	font-family: 'Lobster', cursive;
+	font-size: 70px;
+}
 
+input {
+	font-family: 'Lobster', cursive;
+	font-size: 20px;
+	height: 40px;
+	width: 400px;
+	color: #FF2211;
+	border-style: solid;
+	border-color: #FF2211;
+	text-align: center;
+	border-radius: 15%;
+}
 
+.btn {
+	font-family: 'Lobster', cursive;
+	font-size: 25px;
+	height: 40px;
+	color: #FF2211;
+	background-color: white;
+	border-style: solid;
+	border-width: 2px;
+	border-color: #FF2211;
+	border-radius: 20%;
+}
+
+.box-containing-user-list {
+	font-family: 'Lobster', cursive;
+	position: absolute;
+	top: 30px;
+	right: 100px;
+	height: 600px;
+	width: 500px;
+	border-radius: 30%;
+	background-color: #DDDEDE;
+	overflow: hidden;
+	overflow-y: scroll;
+}
+
+.list-of-users {
+	position: relative;
+	top: 40px;
+	left: 50px;
+}
+
+ul {
+	position-left: 50px;
+}
+
+a.all-links {
+	color: #FF2211;
+}
+
+a.all-links:link {
+	text-decoration: none;
+	color: #FF2211;
+}
+
+a.all-links:active{
+	color: #FF2211;
+}
+
+a.all-links:visited {
+	color: #FF2211;
+}
+
+a.all-links:hover{
+	-ms-animation:wiggle .3s 2;
+	-moz-animation:wiggle .3s 2;
+	-webkit-animation:wiggle .3s 2;
+	animation:wiggle .3s 2;
+	color: #FF2211;
+}
+
+</style>
