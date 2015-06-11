@@ -14,7 +14,8 @@ describe('Github Profile Finder', function() {
 	it('finds profiles', function() {
 		inputBox.sendKeys('ashleigh090990');
 		searchButton.click();
-		expect(element(by.binding('user.login')).getText()).toEqual('ashleigh090990');
+		var profiles = element.all(by.repeater('user in searchCtrl.searchResult.items'));
+		expect(profiles.get(0).getText()).toEqual('ashleigh090990');
 	});
 
 });
