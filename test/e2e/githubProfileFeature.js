@@ -13,15 +13,15 @@ describe('Github Profile Finder', function() {
 	});
 
 	it('finds profiles', function() {
-		inputBox.sendKeys('ashleigh090990');
+		inputBox.sendKeys('ashleigh');
 		searchButton.click();
-		expect(profiles.get(0).getText()).toEqual('ashleigh090990');
+		expect(profiles.get(0).getText()).toEqual('lashleigh');
 	});
 
 	it('finds the last Ashleigh', function() {
-		inputBox.sendKeys('ashleigh090990');
+		inputBox.sendKeys('ashleigh');
 		searchButton.click();
-		expect(profiles.last().getText()).toEqual('ashleigh090990');
+		expect(profiles.last().getText()).toEqual('Lookyounger');
 	});
 
 });
