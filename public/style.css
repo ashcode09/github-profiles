@@ -151,6 +151,10 @@ ul {
 
 a.all-links {
   color: #FF2211;
+  font-size: 17px;
+  position: relative;
+  bottom: 30px;
+  left: 20px;
 }
 
 a.all-links:link {
