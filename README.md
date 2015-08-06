@@ -1,6 +1,6 @@
 # GitHub Profiles
 
-![screenshot of page](images/screenshot of page.png)
+![screenshot of page](images/screenshot of page 2.png)
 
 A responsive web application built to search GitHub profiles using the GitHub API.
 
