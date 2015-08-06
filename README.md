@@ -2,7 +2,7 @@
 
 [Screenshot of app here]
 
-![screenshot of page.png](screenshot of page.png)
+![images/screenshot of page.png](screenshot of page)
 
 [Link to Heroku, if deployed]
 
