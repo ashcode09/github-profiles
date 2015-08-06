@@ -86,10 +86,6 @@ body {
   font-size: 15px;
 }
 
-.list-of-users {
-  margin: right;
-}
-
 img {
   width: 70%;
 }
@@ -114,6 +110,13 @@ img {
 h1 {
   font-family: 'Lobster', cursive;
   font-size: 70px;
+}
+
+h2 {
+  position: relative;
+  left: 10%;
+  top: 2%;
+  color: #FF2211;
 }
 
 input {
@@ -142,8 +145,8 @@ input {
 
 .list-of-users {
   position: relative;
-  top: 40px;
-  left: 50px;
+  top: 2%;
+  left: 10%;
 }
 
 ul {
@@ -183,7 +186,9 @@ a.all-links:hover{
 
   .heading-and-search-bar {
     float: center;
-    width: 100%;
+    margin-right: 4%;
+    margin-left: 2%;
+    width: 94%;
   }
 
   .box-containing-user-list {
