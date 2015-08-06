@@ -1,8 +1,8 @@
 # GitHub Profiles
 
-[Screenshot of app here]
-
 ![screenshot of page](images/screenshot of page.png)
+
+Responsive web application built to search GitHub profiles using the GitHub API.
 
 [Link to Heroku, if deployed]
 
@@ -15,7 +15,6 @@
 *Some spec here...*
 
 Use the GitHub API to search for any GitHub user by typing in their name, and the app will return a list of users whose name matches!
-
 
 
 
