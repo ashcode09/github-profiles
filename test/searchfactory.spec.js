@@ -9,9 +9,9 @@ describe('factory: Search', function() {
       "html_url": "https://github.com/tansaku"
     },
     {
-      "login": "stephenlloyd",
-      "avatar_url": "https://avatars.githubusercontent.com/u/196474?v=3",
-      "html_url": "https://github.com/stephenlloyd"
+      "login": "ashleigh090990",
+      "avatar_url": "https://avatars.githubusercontent.com/u/8567247?v=3",
+      "html_url": "https://github.com/ashleigh090990"
     }
   ];
 

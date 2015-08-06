@@ -13,15 +13,9 @@ describe('Github Profile Finder', function() {
   });
 
   it('finds profiles', function() {
-    inputBox.sendKeys('ashleigh');
+    inputBox.sendKeys('ashleigh090990');
     searchButton.click();
-    expect(profiles.get(0).getText()).toEqual('lashleigh');
-  });
-
-  it('finds the last Ashleigh', function() {
-    inputBox.sendKeys('ashleigh');
-    searchButton.click();
-    expect(profiles.last().getText()).toEqual('Lookyounger');
+    expect(profiles.get(0).getText()).toEqual('ashleigh090990');
   });
 
 });
