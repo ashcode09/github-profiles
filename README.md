@@ -83,10 +83,18 @@ Update Selenium Webserver:
 $ webdriver-manager update
 ```
 
+Start the Selenium Webserver with:
 ```
 $ webdriver-manager start
 ```
 
+And start HTTP-Server:
+```
+$ ./node_modules/http-server/bin/http-server ./
+```
+
+The run Protractor:
 ```
 $ ./node_modules/protractor/bin/protractor test/e2e/conf.js
 ```
+Again, if you have Protractor installed locally, you only need to run ```$ protractor test/e2e/conf.js```.
