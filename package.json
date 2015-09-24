@@ -4,7 +4,8 @@
   "description": "following github profiles tutorial",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -27,6 +28,8 @@
   },
   "dependencies": {
     "http-server": "^0.8.0",
-    "webdriver-manager": "^7.0.1"
+    "webdriver-manager": "^7.0.1",
+    "bower": "^1.4.1",
+    "express": "^4.12.3"
   }
 }
